@@ -24,6 +24,9 @@ const url_tiktok = 'https://vt.tiktok.com/ZSehyjVW9/'
 const url_instagram = 'https://www.instagram.com/p/CJFsOsKJMHa6FCRkbjn0mR3jJ0KwHOCCMaW7_Q0/?utm_medium=copy_link'
 const url_facebook = 'http://www.facebook.com/groups/526909968570398/permalink/571916620736399/'
 const url_twitter = 'https://twitter.com/LucuLucuVideo/status/1454834787382816775?s=20'
+const url_soundcloud = 'https://soundcloud.com/enggak-tau-829795349/tri-suaka-aku-bukan-jodohnya?utm_campaign=social_sharing&utm_source=mobi&utm_terms=social_sharing_on_mobi.control%2Ctop_curators.top_curators'
+const url_imgur = 'https://imgur.com/gallery/rK8ppvC'
+const url_imdb = 'https://www.imdb.com/video/vi146981657?listId=ls053181649'
 const url_telesticker = 'https://t.me/addstickers/c1129234339_by_HarukaAyaBot'
 
 // youtube
@@ -48,6 +51,21 @@ xa.Facebook(url_facebook)
 
 // twitter
 xa.Twitter(url_twitter)
+    .then(data => {console.log(data)
+});
+
+// soundcloud
+xa.SoundCloud(url_soundcloud)
+    .then(data => {console.log(data)
+});
+
+// imgur
+xa.Imgur(url_imgur)
+    .then(data => {console.log(data)
+});
+
+// imdb
+xa.Imdb(url_imdb)
     .then(data => {console.log(data)
 });
 
@@ -87,6 +105,7 @@ const query_pinterest = 'elaina'
 const query_film = 'love'
 const query_wattpad = 'love'
 const query_webtoons = 'love'
+const query_mangatoons = 'love'
 const query_drakor = 'love'
 const query_stickersearch = 'patrick'
 
@@ -107,6 +126,11 @@ xa.Wattpad(query_wattpad)
 
 // webtoons
 xa.Webtoons(query_webtoons)
+    .then(data => {console.log(data)
+});
+
+// mangatoons
+xa.Mangatoons(query_mangatoons)
     .then(data => {console.log(data)
 });
 
@@ -143,7 +167,7 @@ xa.TafsirSurah(query)
 });
 ```
 
-## ```Information```
+## ```Information && News```
 ```js
 const xa = require('xfarr-api');
 
@@ -161,6 +185,16 @@ xa.JadwalTv()
 
 // jadwalsholat
 xa.JadwalSholat()
+    .then(data => {console.log(data)
+});
+
+// kompasnews
+xa.KompasNews()
+    .then(data => {console.log(data)
+});
+
+// inews
+xa.Inews()
     .then(data => {console.log(data)
 });
 

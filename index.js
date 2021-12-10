@@ -237,6 +237,30 @@ const wattpaduser = (query) => {
             .catch(reject)
     })
 }
+const mangatoons = (query) => {
+    return new Promise((resolve, reject) => {
+        axios.get(`https://mangatoon.mobi/en/search?word=${query}`)
+            .then(({
+                data
+            }) => {
+                const $ = cheerio.load(data)
+                const hasil = [];
+                 $('#page-content > div.search-page > div > div.comics-result > div.recommended-wrap > div > div ').each(function(a, b) {
+                    result = {
+                    status: 200,
+                    author: author,
+                    judul: $(b).find('> div.recommend-comics-title > span').text(),
+                    genre: $(b).find('> div.comics-type > span').text().trim(),
+                    link: 'https://mangatoon.mobi' + $(b).find('> a').attr('href'),
+                    thumbnail: $(b).find('> a > div > img').attr('src')
+                }
+                hasil.push(result)
+                })
+                resolve(hasil)
+            })
+            .catch(reject)
+    })
+}
 const webtoons = (query) => {
     return new Promise((resolve, reject) => {
         axios.get(`https://www.webtoons.com/id/search?keyword=${query}`)
@@ -415,8 +439,7 @@ const downloader = async (url) => {
                 formData: {url: url,token: token}
             };
             request(options, async function(error, response, body) {
-                if (error) throw new Error(error);
-                const $ = cheerio.load(body)
+                if (error) throw new Error(error)
                 res = JSON.parse(body)
                 res.status = 200
                 res.author = author
@@ -439,6 +462,57 @@ const pinterest = (query) => {
             }).catch(reject)
         })
     }
+const kompasnews = () => {
+    return new Promise((resolve, reject) => {
+        axios.get(`https://news.kompas.com/`)
+            .then(({
+                data
+            }) => {
+                const $ = cheerio.load(data)
+                const hasil = [];
+                 $('body > div > div.container.clearfix > div:nth-child(3) > div.col-bs10-7 > div:nth-child(3) > div.latest.ga--latest.mt2.clearfix > div > div ').each(function(a, b) {
+                    result = {
+                    status: 200,
+                    author: author,
+                    berita: $(b).find('> div > div.article__box > h3').text(),
+                    upload_time: $(b).find('> div > div.article__box > div.article__date').text(),
+                    type_berita: $(b).find('> div > div.article__boxsubtitle > h2').text(),
+                    link: $(b).find('> div > div.article__box > h3 > a').attr('href'),
+                    thumbnail: $(b).find('> div > div.article__asset > a > img').attr('data-src'),
+                    info_berita: $(b).find('> div > div.article__box > div.article__lead').text()
+                }
+                hasil.push(result)
+                })
+                resolve(hasil)
+            })
+            .catch(reject)
+    })
+}
+const inews = () => {
+    return new Promise((resolve, reject) => {
+        axios.get(`https://www.inews.id/news`)
+            .then(({
+                data
+            }) => {
+                const $ = cheerio.load(data)
+                const hasil = [];
+                 $('#news-list > li ').each(function(a, b) {
+                    result = {
+                    status: 200,
+                    author: author,bg
+                    berita: $(b).find('> a > div > div > div.float-left.width-400px.margin-130px-left > h3').text().trim(),
+                    upload_time: $(b).find('> a > div > div > div.float-left.width-400px.margin-130px-left > div.date.margin-10px-left').text().trim().split('|')[0],
+                    link: $(b).find('> a').attr('href'),
+                    thumbnail: $(b).find('> a > div > div > div.float-left.width-130px.position-absolute > img').attr('data-original'),
+                    info_berita: $(b).find('> a > div > div > div.float-left.width-400px.margin-130px-left > p').text()
+                }
+                hasil.push(result)
+                })
+                resolve(hasil)
+            })
+            .catch(reject)
+    })
+}
 module.exports.Downloader = downloader
 module.exports.Anime = anime
 module.exports.Manga = manga
@@ -451,9 +525,12 @@ module.exports.Film = film
 module.exports.Wattpad = wattpad
 module.exports.WattpadUser = wattpaduser
 module.exports.Webtoons = webtoons
+module.exports.Mangatoons = mangatoons
 module.exports.Drakor = drakor
 module.exports.Telesticker = telesticker
 module.exports.StickerSearch = stickersearch
 module.exports.ListSurah = listsurah
 module.exports.Surah = surah
 module.exports.TafsirSurah = tafsirsurah
+module.exports.KompasNews = kompasnews
+module.exports.INews = inews
