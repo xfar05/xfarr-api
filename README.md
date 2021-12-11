@@ -1,4 +1,4 @@
-<center><img src="https://tinyurl.com/yj6s63a2" alt="XFar" width="500" />
+<center><img src="https://upload-xfar05.herokuapp.com/file/bhtJxgA7knVv.webp" alt="XFar" width="500" />
 </p></center>
 <p align="center">
 <a href="#"><img title="xfarr-api" src="https://img.shields.io/badge/xfarr-api-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
