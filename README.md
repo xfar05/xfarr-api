@@ -16,8 +16,8 @@
     <img src="https://img.shields.io/github/forks/xfar05/xfarr-api?label=Forks&color=ff69b4&style=plastic">
 
   </a>
-  <a href="https://github.com/xfar05?tab=stars">
-    <img src="https://img.shields.io/github/stars/xfar05?color=ff69b4&label=Stargazers&style=plastic">
+  <a href="https://github.com/xfar05/xfarr-api/stargazers">
+    <img src="https://img.shields.io/github/stars/xfar05/xfarr-api?color=ff69b4&label=Stargazers&style=plastic">
 
   </a>
   <a href="https://github.com/xfar05/xfarr-api/issues">
