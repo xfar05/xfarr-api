@@ -1,14 +1,28 @@
-<center><img src="https://a.uguu.se/ROZbMynM.webp" alt="XFar" width="500" />
-</p></center>
 <p align="center">
-<a href="#"><img title="xfarr-api" src="https://img.shields.io/badge/xfarr-api-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
-
+<!-- <img src="https://i.pinimg.com/originals/f5/f7/6a/f5f76ac10b936083d5ed741f55a565df.jpg" width="140" height="140"/> -->
 <p align="center">
-<a href="https://github.com/xfar05/xfarr-api"><img title="Followers" src="https://img.shields.io/github/followers/xfar05?color=blue&style=flat-square"></a>
-<a href="https://github.com/xfar05/xfarr-api"><img title="Stars" src="https://img.shields.io/github/stars/xfar05/xfarr-api?color=red&style=flat-square"></a>
-<a href="https://github.com/xfar05/xfarr-api/network/members"><img title="Forks" src="https://img.shields.io/github/forks/xfar05/xfarr-api?color=red&style=flat-square"></a>
-<a href="https://github.com/xfar05/xfarr-api/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/xfar05/xfarr-api?label=Watchers&color=blue&style=flat-square"></a>
+  <img src="https://i.pinimg.com/originals/f5/f7/6a/f5f76ac10b936083d5ed741f55a565df.jpg" alt="shinoa" />
 </p>
+
+<div align="center">
+<h2> xfarr-api </h2>
+</div>
+<div align="center">
+  <a href="httsp://github.com/xfar05/xfarr-api">
+    <img src="https://img.shields.io/github/repo-size/xfar05/xfarr-api?color=purple&label=Repo%20total%20size&style=for-the-badge&logo=github">
+    </div>
+<p align="center">
+  <a href="https://github.com/xfar05/xfarr-api/network/members">
+    <img src="https://img.shields.io/github/forks/xfar05/xfarr-api?label=Forks&color=ff69b4&style=plastic">
+
+  </a>
+  <a href="https://github.com/xfar05?tab=stars">
+    <img src="https://img.shields.io/github/stars/xfar05?color=ff69b4&label=Stargazers&style=plastic">
+
+  </a>
+  <a href="https://github.com/xfar05/xfarr-api/issues">
+    <img src="https://img.shields.io/github/issues/xfar05/xfarr-api?label=Issues&color=ff69b4&style=plastic">
+    </a>
 
 ## Penginstalan
 > npm install xfarr-api
