@@ -365,9 +365,9 @@ const query = {
   debase64: 'eGZhcg==',
   debinary: '01111000 01100110 01100001 01110010',
   ssweb_device: 'desktop', // (desktop,tablet,phone)
-  obfuscator: 'function p(y) {
+  obfuscator: `function p(y) {
                     console.log(y)
-  }'
+  }`
 }
 const url = 'https://github.com/xfar05'
 
