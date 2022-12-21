@@ -4,7 +4,6 @@
   "description": "Manuk Akal",
   "main": "index.js",
   "scripts": {
-    "preinstall": "npm install -g deobfuscator",
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
