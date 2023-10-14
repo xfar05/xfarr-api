@@ -1,0 +1,33 @@
+{
+  "name": "xfarr-api",
+  "version": "3.0.0",
+  "description": "api wrapper from api.xfarr.com",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^1.5.1",
+    "dotenv": "^16.3.1",
+    "form-data": "^4.0.0"
+  },
+  "keywords": [
+    "xfarr-api",
+    "scraper",
+    "xfar",
+    "botwhatsapp",
+    "api",
+    "api-wraper",
+    "rest-api"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xfar05/xfarr-api.git"
+  },
+  "author": "XFar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xfar05/xfarr-api/issues"
+  },
+  "homepage": "https://api.xfarr.com"
+}
