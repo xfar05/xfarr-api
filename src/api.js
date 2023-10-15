@@ -5,7 +5,7 @@ const FormData = require("form-data");
 
 class API {
   constructor(baseURL, options) {
-    this.URI = baseURL
+    this.URI = baseURL;
     this.create = axios.create({
       baseURL: this.URI,
       timeout: 60000,

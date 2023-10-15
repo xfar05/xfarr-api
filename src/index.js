@@ -1,10 +1,9 @@
-require("dotenv").config();
 const { API } = require("./api");
 
 class xfar {
 	constructor(apikey) {
-		this.ApiKEY = apikey ? apikey : process.env.ApiKEY;
-		this.baseURL = process.env.baseURL;
+		this.ApiKEY = apikey ? apikey : ''
+		this.baseURL = "https://api.xfarr.com"
 	}
 	async api(options = {}) {
 		if (!this.ApiKEY) {
